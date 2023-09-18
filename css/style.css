@@ -1,0 +1,915 @@
+@charset "UTF-8";
+/* 包括部分 */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "メイリオ", "Meiryo", "Yu Gothic Medium", "游ゴシック Medium", "Yugothic", "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  margin: 0px;
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  body {
+    box-sizing: border-box;
+  }
+}
+
+.wrapper {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  .wrapper {
+    margin-top: 130px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .wrapper {
+    margin-top: 110px;
+  }
+}
+
+/* コンテンツ箇所 */
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  [class*=-content] {
+    width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  [class*=-content] {
+    width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* 見出し */
+h2 {
+  font-family: "Cormorant Garamond", sans-serif;
+  font-size: 60px;
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  h2 {
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+/* スクロール系 */
+dl {
+  margin-top: 10px;
+  height: 646px;
+  overflow-y: scroll;
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  dl {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+dt {
+  font-family: "メイリオ", "Meiryo", "Yu Gothic Medium", sans-serif;
+  font-size: 24px;
+  color: #7C7C7C;
+  padding-bottom: 1.25rem;
+  padding-top: 2.5rem;
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  dt {
+    font-size: 1.25rem;
+    padding-top: 1.5rem;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  dt {
+    font-size: 1rem;
+    padding-top: 1.5rem;
+  }
+}
+
+dd {
+  font-family: "メイリオ", "Meiryo", "Yu Gothic Medium", sans-serif;
+  font-size: 20px;
+  margin-left: 0%;
+  border-bottom: solid 1px #000; /* 下線 */
+  padding-top: 1.25rem;
+  padding-bottom: 2.5rem;
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  dd {
+    font-size: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  dd {
+    font-size: 0.75rem;
+    padding-top: 0.75rem;
+    padding-bottom: 1rem;
+  }
+}
+
+a {
+  transition: color 300ms;
+  color: black;
+}
+a:hover {
+  color: grey;
+}
+
+/* header部分 */
+.page-header {
+  display: flex; /* 横並びにする */
+  justify-content: space-between; /* 均等にする */
+  max-width: 1285px;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 150px;
+  /* ハンバーガーメニュー */
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  .page-header {
+    margin-right: 2%;
+    margin-left: 2%;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .page-header nav {
+    margin-right: 3%;
+    display: flex;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .page-header__logo {
+    height: 20%;
+    width: 20%;
+  }
+}
+.page-header__logo img {
+  width: 160px;
+  margin-top: -10px;
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  .page-header__logo img {
+    margin-left: -15px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .page-header__logo img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.page-header__sns-nav, .page-header__menu-nav {
+  font-family: "kaiti SC", sans-serif;
+  display: flex; /* 横並びにする */
+  font-size: 22px;
+  list-style: none; /* 先頭の・をなくす */
+}
+.page-header__sns-nav {
+  margin-top: 30px;
+  margin-bottom: 4px;
+  margin-left: 31%;
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .page-header__sns-nav {
+    margin-left: 0;
+    margin-top: 5%;
+    margin-right: 25px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .page-header__sns-nav img {
+    width: 17px;
+  }
+}
+.page-header__sns-nav li {
+  margin-left: 1rem;
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .page-header__sns-nav li {
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+}
+.page-header__menu-nav {
+  margin-top: 0;
+  /* menuナビの後ろに入れる装飾 */
+  /* menuナビの一番後ろに入れる装飾 */
+}
+.page-header__menu-nav li a {
+  text-decoration: none; /* 下線消し */
+}
+.page-header__menu-nav li:after {
+  content: "/";
+  padding: 0.8rem;
+}
+.page-header__menu-nav li:last-child::after {
+  content: none;
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  .page-header__menu-nav {
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .page-header__menu-nav {
+    display: none;
+  }
+}
+.page-header__menu {
+  display: none;
+  font-family: "kaiti SC", sans-serif;
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .page-header__menu {
+    /* メニューを縦に */
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+    /* メニューの位置マイナス指定で画面外に */
+    top: -100%;
+    width: 100%;
+    height: 380px;
+    background-color: rgba(78, 16, 16, 0.8);
+    transition: 0.5s;
+  }
+}
+.page-header__menu__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-header__menu__list a {
+  color: #efefef;
+  text-decoration: none; /* 下線消し */
+}
+.page-header__hamberger-btn {
+  position: fixed;
+  top: 16px;
+  right: 7px;
+  width: 20px;
+  z-index: 10;
+}
+.page-header__hamberger-btn span {
+  width: 15px;
+  height: 1px;
+  background-color: #d6d5d5;
+  position: relative;
+  transition: ease 0.4s; /*ハンバーガーメニュークリック時の三本線の動きを遅延*/
+  display: none;
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .page-header__hamberger-btn span {
+    display: block;
+  }
+}
+.page-header__hamberger-btn span:nth-child(1) {
+  top: 0;
+}
+.page-header__hamberger-btn span:nth-child(2) {
+  margin: 5px 0;
+}
+.page-header__hamberger-btn span:nth-child(3) {
+  top: 0;
+}
+
+/* ハンバーガーメニューボタン押下時 */
+/* ハンバーガーメニューを変形 */
+.active span:nth-child(1) {
+  width: 80%;
+  top: 6px;
+  left: -1px;
+  transform: rotate(45deg);
+}
+
+.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.active span:nth-child(3) {
+  width: 80%;
+  top: -6px;
+  left: -1px;
+  transform: rotate(-45deg);
+}
+
+/* メニューを表示 */
+.open {
+  position: fixed;
+  top: 0%;
+}
+
+/* メイン写真 */
+.main-img {
+  margin-top: -10px;
+  width: 1285px;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  .main-img {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  .main-img__screen {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .main-img__screen {
+    display: none;
+  }
+}
+.main-img__phone {
+  display: none;
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .main-img__phone {
+    display: block;
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* スクロールアイコン */
+.icon-in {
+  width: 108px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 70px;
+  margin: auto;
+  opacity: 0; /* 透明度 */
+  transition-duration: 1000ms;
+  transform: translate(0, -50px); /* 上から落ちてくるよう設定 */
+  transition-property: opacity, transform; /* アニメーションで設定する項目 */
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  .icon-in {
+    display: none;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .icon-in {
+    display: none;
+  }
+}
+
+.scroll-icon-in {
+  opacity: 1; /* 透明度 */
+  transform: translate(0, 0); /* 上から落ちてくるよう設定 */
+}
+
+/* スクロール時に消えるよう設定 */
+.scroll-icon-fadeout {
+  animation: fadeOut 1000ms;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* ニュース部分 */
+.news-content__live-url {
+  color: mediumturquoise;
+}
+.news-content__live-url:hover {
+  color: lightseagreen;
+}
+.news-content__flyer {
+  width: 50%;
+  object-fit: cover;
+  text-decoration: none;
+  transition: color 300ms;
+  color: black;
+}
+.news-content__flyer:hover {
+  color: grey;
+}
+.news-content__info_img {
+  margin-top: 1rem;
+  width: 20%;
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  .news-content__info_img {
+    width: 35%;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .news-content__info_img {
+    width: 50%;
+  }
+}
+
+/* ライブ部分 */
+/* メイリオ背景 */
+.bg-grey {
+  background-color: #F2F2F2;
+  margin-top: 70px;
+  height: 770px;
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .bg-grey {
+    margin-top: 35px;
+    height: 735px;
+  }
+}
+
+.live-content {
+  margin-top: -755px;
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  .live-content {
+    margin-top: -755px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .live-content {
+    margin-top: -708px;
+  }
+}
+.live-content__live-url {
+  color: mediumturquoise;
+}
+.live-content__live-url:hover {
+  color: lightseagreen;
+}
+.live-content__flyer {
+  object-fit: cover;
+}
+.live-content__flyer img {
+  width: 50%;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .live-content__flyer img {
+    width: 100%;
+  }
+}
+.live-content dd {
+  border-bottom: solid 3px #FFFFFF;
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  .live-content dl {
+    max-height: 630px;
+  }
+}
+
+/* プロフィール部分 */
+.profile-content {
+  margin-top: 140px;
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .profile-content {
+    margin-top: 105px;
+  }
+}
+.profile-content__info {
+  display: flex;
+  margin-top: 5%;
+}
+.profile-content__info__img {
+  margin-left: -10px;
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  .profile-content__info__img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .profile-content__info__img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+}
+.profile-content__info__text {
+  font-family: "メイリオ", "Meiryo", "Yu Gothic Medium", sans-serif;
+  font-size: 25px;
+  margin-left: 6rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  .profile-content__info__text {
+    font-size: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .profile-content__info__text {
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+.profile-content__info__text p {
+  margin-top: 8%;
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  .profile-content__info {
+    /* 重なるよう配置 */
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .profile-content__info {
+    /* 重なるよう配置 */
+    flex-direction: column;
+  }
+}
+
+/* ディスコグラフィー部分 */
+/* メイリオ背景 */
+.bg-grey-dis {
+  background-color: #F2F2F2;
+  margin-top: 90px;
+  height: 770px;
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  .bg-grey-dis {
+    margin-top: 70px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .bg-grey-dis {
+    margin-top: 30px;
+    height: 710px;
+  }
+}
+
+.disco-content {
+  margin-top: -757px;
+  height: 690px;
+  font-size: 20px;
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  .disco-content {
+    margin-top: -756px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .disco-content {
+    margin-top: -682px;
+  }
+}
+.disco-content__info {
+  height: 600px;
+  overflow-y: scroll;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+  margin-top: 5%;
+}
+.disco-content__info__item--date {
+  color: #AFAFAF;
+  margin: 0.5rem 0rem 0.5rem;
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  .disco-content__info {
+    height: 619px;
+  }
+}
+.disco-content img {
+  width: 100%;
+}
+.disco-content p {
+  font-family: "メイリオ", "Meiryo", "Yu Gothic Medium", sans-serif;
+  font-size: 20px;
+  margin: 0.5rem 0rem 0.5rem;
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  .disco-content p {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .disco-content p {
+    font-size: 1rem;
+  }
+}
+
+/* フッター部分 */
+.footer {
+  margin-top: 130px;
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .footer {
+    margin-top: 30px;
+  }
+}
+.footer__sns-nav {
+  padding: 0;
+  text-align: center;
+  list-style: none;
+  margin: 60px;
+  /* なぜか分からないが、liをdisplay指定しないとうまくいかない */
+}
+.footer__sns-nav li {
+  display: inline-block;
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .footer__sns-nav li img {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .footer__sns-nav {
+    margin: 30px;
+  }
+}
+.footer__copy {
+  background: url(../img/func_footer.jpg);
+  background-repeat: repeat-x;
+  min-height: 156px;
+}
+.footer__copy p {
+  text-align: center;
+  color: #fff;
+  font-family: "Kaiti SC", sans-serif;
+  font-size: 1rem;
+  padding-top: 1.2rem;
+}
+
+/* JavaScript用 */
+.scroll-fade {
+  opacity: 0;
+  transition-duration: 1000ms;
+  transition-property: opacity, transform;
+}
+
+.scroll-in {
+  opacity: 1;
+  transform: translate(0, -50px);
+}
+
+/* PageTopボタン */
+.page-top {
+  transition: opacity 1s;
+  transition-duration: 1000ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.page-top.is-fadein {
+  visibility: visible;
+  opacity: 1;
+}
+
+.arrow {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #c4c4c4;
+  border-radius: 22px;
+  padding: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.arrow:hover {
+  opacity: 0.8;
+  bottom: 15px;
+  box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.5);
+}
+
+.arrow:before, .arrow:after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-top: solid 3px #fff;
+  border-right: solid 3px #fff;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 14px;
+}
+
+.arrow:before {
+  top: 11px;
+}
+
+.arrow:after {
+  top: 21px;
+}
+
+/* バナー */
+.banner {
+  position: fixed;
+  left: -100%;
+  bottom: 12px;
+  transition: 0.5s;
+}
+.banner__img img {
+  width: 50%;
+}
+.banner__delete-btn {
+  position: relative;
+  top: -5px;
+  left: 49%;
+}
+.banner__delete-btn span {
+  display: flex;
+  width: 20px;
+  height: 2px;
+  background-color: #525252;
+  position: relative;
+}
+.banner__delete-btn span:nth-child(1) {
+  top: 2px;
+  transform: rotate(45deg);
+}
+.banner__delete-btn span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+.banner-in {
+  left: 12px;
+}
+
+.delete {
+  display: none;
+}
+
+/* 歌詞情報 */
+/* 共通箇所 */
+.wrapper_lyric {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  .wrapper_lyric {
+    margin-top: 130px;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .wrapper_lyric {
+    margin-top: 110px;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+
+/* ヘッダ箇所 */
+.page-header__lyrics {
+  margin-top: 33px;
+  margin-right: 13%;
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .page-header__lyrics {
+    margin-top: 2%;
+  }
+}
+
+/* 曲選択箇所 */
+.songs {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  text-align: center;
+  width: 96%;
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .songs {
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+}
+.songs li {
+  display: inline-block;
+  border-bottom: #000000 1px solid;
+}
+.songs li a {
+  text-decoration: none; /* 下線消し */
+}
+.songs__song {
+  overflow-x: scroll;
+  white-space: nowrap; /* 幅が狭くなっても折り返さない */
+}
+.songs__jp {
+  font-family: "メイリオ", "Meiryo", "Yu Gothic Medium", sans-serif;
+}
+.songs__en {
+  font-size: 1.75rem;
+}
+
+/* 楽曲情報箇所 */
+.info {
+  max-width: 1300px;
+  margin: 20px auto 10px auto;
+  height: 100px;
+  background-color: #F2F2F2;
+}
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  .info {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .info {
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 2%;
+    height: 70px;
+  }
+}
+
+#display_title {
+  font-size: 1.8rem;
+  padding-top: 0.5%;
+  text-align: center;
+  font-family: "メイリオ", "Meiryo", "Yu Gothic Medium", sans-serif;
+  min-height: 40px;
+  max-height: 40px;
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  #display_title {
+    font-size: 1.5rem;
+    min-height: 30px;
+    max-height: 30px;
+  }
+}
+
+#display_write {
+  margin-left: 1%;
+  font-size: 1rem;
+  font-family: "メイリオ", "Meiryo", "Yu Gothic Medium", sans-serif;
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  #display_write {
+    font-size: 0.7rem;
+  }
+}
+
+#display_make {
+  margin-left: 1%;
+  padding-bottom: 0.5%;
+  font-size: 1rem;
+  font-family: "メイリオ", "Meiryo", "Yu Gothic Medium", sans-serif;
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  #display_make {
+    font-size: 0.7rem;
+  }
+}
+
+/* 歌詞情報 */
+.lyric {
+  margin-top: 50px;
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .lyric {
+    margin-top: 30px;
+  }
+}
+
+#display_lyric {
+  font-size: 18px;
+  font-family: "メイリオ", "Meiryo", "Yu Gothic Medium", sans-serif;
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  #display_lyric {
+    font-size: 0.8rem;
+  }
+}/*# sourceMappingURL=style.css.map */
