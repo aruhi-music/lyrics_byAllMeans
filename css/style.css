@@ -832,6 +832,9 @@ a:hover {
 .songs__en {
   font-size: 1.75rem;
 }
+.songs__song__jp, .songs__song__en {
+  margin-right: 6px;
+}
 
 /* 楽曲情報箇所 */
 .info {
@@ -913,3 +916,60 @@ a:hover {
     font-size: 0.8rem;
   }
 }/*# sourceMappingURL=style.css.map */
+.footer {
+    align-items: center;
+    background-color: #000;
+}
+.footer__piano {
+    height: 486px;
+    width: 108px;
+}
+.footer__piano img {
+    height: 100%;
+}
+.footer > div:not(.footer__piano) {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100vw - 108px);
+    padding: 0 70px;
+}
+.footer__nav li {
+    list-style: none;
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.footer__nav li:last-child {
+    margin-bottom: 0;
+}
+.footer__nav li a {
+    color: #fff;
+    text-decoration: none;
+}
+.footer__sns-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.footer__sns-nav li {
+    list-style: none;
+    padding-right: 10px;
+    transition: all 0.2s ease-in-out;
+}
+.footer__sns-nav li:last-child {
+    padding-right: 0;
+}
+.footer__sns-nav li:hover {
+    scale: 1.1;
+}
+.footer__copy {
+    color: #fff;
+    text-align: center;
+    padding-top: 20px;
+}
+@media screen and (min-width: 0px) and (max-width: 639px) {
+  .footer__sns-nav {
+    gap: 0;
+  }
+}
