@@ -108,6 +108,16 @@ const justice = {
         },
     }
 }
+// 変身
+const transformation = {
+    songs: {
+        song1: {
+            songId: "transformation",
+            songName: "変身",
+            titleLang: "songs__song__jp"
+        },
+    }
+}
 function aniPause (aniClass) {
     aniClass.currentTime = 0;
     aniClass.pause();
@@ -167,6 +177,8 @@ window.onload = function () {
         album = JSON.parse(JSON.stringify(deadAlive));
     } else if (param === 'justice') {
         album = JSON.parse(JSON.stringify(justice));
+    } else if (param === 'transformation') {
+        album = JSON.parse(JSON.stringify(transformation));
     }
     for (const songId in album.songs) {
         const song = album.songs[songId];
@@ -376,14 +388,14 @@ window.onload = function () {
             )
         };
     }
-    // 
-    if(document.getElementById('')) {
-        document.getElementById("").onclick = function() {
+    // 変身
+    if(document.getElementById('transformation')) {
+        document.getElementById("transformation").onclick = function() {
             displayLyric(
-                "",
-                "",
-                "",
-                ""
+                "変身",
+                "室山颯",
+                "室山颯",
+                "人には誰もが皆 見せられぬモノがある<br>押さえつけた欲望が 時に顔を出す<br><br>人には誰しもが皆 魅せられたモノがある<br>抑えきれないこの衝動が 体を突き動かせる<br>私の意思なのか 違う誰かなのか 揺らぐ心が今<br>私は 【貴方】あなたは？ 【わたし】<br>表が 【裏に】 裏は表になる<br><br>本当の私がもう 分からなくなる<br>姿や中身さえも変貌を遂げる<br>元々の私にはもう 戻りはしない？<br>その姿 鏡の中の 貴方こそが 私 か<br><br>人は生まれながらにして 変えられぬ性格もある<br>人当たりの良さの陰に 身を潜める<br><br>その薬を飲めば 隠れた側面が 何もかも脱ぎ捨てた<br>私は【奴隷】 苦しみも【痛みも】<br>自由と【引換】 その力に溺れてゆく<br><br>私の中の善悪を 例え切り離せたとしても<br>その人格に 飲み込まれていく<br>元々の私にはもう 戻ることはない<br>この姿 鏡の前の 私こそが 【私ならば】<br>ここで終止符、打つのさ<br>"
             )
         };
     }
