@@ -189,6 +189,8 @@ window.onload = function () {
         album = JSON.parse(JSON.stringify(justice));
     } else if (param === 'transformation') {
         album = JSON.parse(JSON.stringify(transformation));
+    } else if (param === 'hero') {
+        album = JSON.parse(JSON.stringify(hero));
     }
     for (const songId in album.songs) {
         const song = album.songs[songId];
