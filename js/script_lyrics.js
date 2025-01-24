@@ -118,12 +118,22 @@ const transformation = {
         },
     }
 }
-// 変身
+// HERO
 const hero = {
     songs: {
         song1: {
             songId: "hero",
             songName: "HERO",
+            titleLang: "songs__song__en"
+        },
+    }
+}
+// Wolf
+const wolf = {
+    songs: {
+        song1: {
+            songId: "wolf",
+            songName: "Wolf",
             titleLang: "songs__song__en"
         },
     }
@@ -191,6 +201,8 @@ window.onload = function () {
         album = JSON.parse(JSON.stringify(transformation));
     } else if (param === 'hero') {
         album = JSON.parse(JSON.stringify(hero));
+    } else if (param === 'wolf') {
+        album = JSON.parse(JSON.stringify(wolf));
     }
     for (const songId in album.songs) {
         const song = album.songs[songId];
@@ -419,6 +431,17 @@ window.onload = function () {
                 "室山颯",
                 "室山颯",
                 "僕はヒーローに いつかヒーローに<br>なれると信じているから<br><br>あぁ悔しくてたまらない<br>そんな日々に 肩を落としてる暇は無い<br>どんな困難な出来事もプラスに変えて<br><br>(チャンスはそこに転がってる)<br>顔上げてさらにその先へ<br><br>僕はヒーローに いつかヒーローに <br>最高に光輝く人に<br>そんなヒーローに きっとなれるから<br>前へ 前へ 進め<br><br>もう迷いは必要無い <br>信じた道へ 立ち止まってる暇はない<br><br>(準備は いつでも出来ている？)<br>前見続けさらにその先へ <br><br>僕はヒーローに いつかヒーローに<br>最高に熱く心を燃やし<br>今はヒーローに まだなれずとも<br>前へ 前へ 進め<br><br>僕の人生も 誰の人生も<br>最高のヒーローになる為に<br>君もヒーローに きっとなれるから<br>前へ 前へ 進め<br><br>僕はヒーローに いつかヒーローに <br>最高に光輝く人に<br>そんなヒーローに きっとなれるから<br>前へ 前へ 進め<br>未来へ 未来へ 進め<br><br>いつかヒーローに きっとヒーローに<br>誰も代わりはいない 僕だけの命だ"
+            )
+        };
+    }
+    // Wolf
+    if(document.getElementById('wolf')) {
+        document.getElementById("wolf").onclick = function() {
+            displayLyric(
+                "Wolf",
+                "室山颯",
+                "室山颯",
+                "見た目だけでは何も信じてはいけない<br>月明かりが元の姿を照らす<br>「その違いには誰も気づく事は無い<br>今夜の犠牲は誰だ」<br></br>「騙し合いと騙され合いの中」<br>疑いの目は誰に向くのか<br>「その言葉は」嘘か「本当か」真実はどこだ<br>「疑心暗鬼に陥ったのなら」<br>お互いの顔はどう映るのか<br>「生き残るは」人か「魔物か」<br>その正体はどちらだ<br></br>どれだけの深い間柄でも関係ない<br>怪しい奴が選ばれるのさ<br>「自分を守る為にそれは仕方ない<br>今夜の犠牲は誰だ」<br><br>「騙し合いと騙され合いの中」<br>疑いの目は誰に向くのか<br>「その言葉は」嘘か「本当か」真実はどこだ<br>「疑心暗鬼に陥ったのなら」<br>お互いの顔はどう映るのか<br>「生き残るは」人か「魔物か」<br>その正体はどっちだ<br></br>「欺き偽り誤魔化しては」<br>疑いの目を誰に向けるのか<br>「その答えが」導く未来は幸か不幸かどちらだ"
             )
         };
     }
