@@ -213,6 +213,8 @@ window.onload = function () {
         album = JSON.parse(JSON.stringify(hero));
     } else if (param === 'wolf') {
         album = JSON.parse(JSON.stringify(wolf));
+    } else if (param === 'anata') {
+        album = JSON.parse(JSON.stringify(anata));
     }
     for (const songId in album.songs) {
         const song = album.songs[songId];
