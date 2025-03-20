@@ -148,6 +148,16 @@ const anata = {
         },
     }
 }
+// 新世界
+const newworld = {
+    songs: {
+        song1: {
+            songId: "newworld",
+            songName: "newworld",
+            titleLang: "songs__song__jp"
+        },
+    }
+}
 function aniPause (aniClass) {
     aniClass.currentTime = 0;
     aniClass.pause();
@@ -214,6 +224,8 @@ window.onload = function () {
     } else if (param === 'wolf') {
         album = JSON.parse(JSON.stringify(wolf));
     } else if (param === 'anata') {
+        album = JSON.parse(JSON.stringify(anata));
+    } else if (param === 'newworld') {
         album = JSON.parse(JSON.stringify(anata));
     }
     for (const songId in album.songs) {
@@ -465,6 +477,17 @@ window.onload = function () {
                 "山﨑博士",
                 "山﨑博士",
                 "あなたが　これから　私を変えたら　今までのように　いてはくれない<br>それでも　いつかは　戻ると信じていた　二人で描いた夢は消えないはずだ<br><br>どんなに　私が　あなたを　愛していても　あなたはとぼけた顔をしている<br>笑ってよ　怒ってよ　私を見てよ　それだけでいい　あとは何もいらない<br>だから どうか ほっとかないでよ <br>ねぇもしも 私が一番にならなくても これからの二人になれなくても<br>そばにいたいんだよ 願いは届くと 信じて信じていたいだけだよ<br>私がどんなに泣き叫んでも あなたは無表情 眠ったままで<br>どうして何も言ってくれないの<br>わがままな 私に 何か言うことくらい あるでしょう<br><br>やっと 口を 開いた 何を言い出すかと　思えばごめんね<br>何それ　そんな言葉　聞きたかったわけじゃないよ　<br>謝らないでよ　空しくなるよ　だから　どうか　寂しくさせないで<br>ねぇ今の　私は何のためにいるの　今までの日々は嘘だったの<br>そばにいたいんだよ　それでもずっと　信じて　信じて　笑って見せてよ<br>私がどんな言葉 紡いでも　あなたの心は動かないの<br>どうして何も　感じてくれないの<br>わがままな　あたしを　抱きしめることくらい　出来るでしょう<br><br>どんなに　近づいても　あなたはこの手を握らない<br>小さく　蹲る　くらいなら　やめてよ<br>ねぇもしも　これが最後の思い出なら　これからの二人になれないなら<br>そばにいさせてよ　別れの時まで　信じて　信じていられるように<br>私の頬を伝う涙を見て　あなたはやっとめをさました<br>今まで　ありがとう　今まで　ありがとう<br>何度も　繰り返す　その言葉に私も ありがとう"
+            )
+        };
+    }
+    // 新世界
+    if(document.getElementById('newworld')) {
+        document.getElementById("newworld").onclick = function() {
+            displayLyric(
+                "新世界",
+                "室山颯",
+                "室山颯",
+                "この頭脳で この知能で<br>腐り果てた 世を正す<br>邪魔する者は 逆らう者は<br>正義の名の下に裁く<br><br>この思想が この理想が<br>悪を暴き 世を変える<br>恐怖ではなく 支配でもない<br>目指すのは新世界の神だ<br>新世界の神だ<br><br>死神が僕を導いていく この力があれば<br>手を染めてしまったら 後には引けない<br>もう戻れない<br><br>おかしくなっていく 正義感も<br>暴走していく<br>狂い狂っていく 価値観も<br>壊れてしまう<br><br>歪んだ お月様<br>己こそが正義か<br>淀んだ 明かりが<br>世界を照らした<br><br>おかしくなっていく 正義感も<br>暴走していく<br>狂い狂っていく 価値観も<br>壊れてしまう<br>イカれてしまっている 神様も<br>見放している<br>名が刻まれる 鼓動はもう<br>すぐに止まる<br><br>砕けた お月様<br>最後の最後は足掻き<br>汚れた 明かりは<br>世界から消えた"
             )
         };
     }
