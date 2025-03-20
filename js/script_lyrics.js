@@ -153,7 +153,7 @@ const newworld = {
     songs: {
         song1: {
             songId: "newworld",
-            songName: "newworld",
+            songName: "新世界",
             titleLang: "songs__song__jp"
         },
     }
