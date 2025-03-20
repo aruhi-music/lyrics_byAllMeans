@@ -226,7 +226,7 @@ window.onload = function () {
     } else if (param === 'anata') {
         album = JSON.parse(JSON.stringify(anata));
     } else if (param === 'newworld') {
-        album = JSON.parse(JSON.stringify(anata));
+        album = JSON.parse(JSON.stringify(newworld));
     }
     for (const songId in album.songs) {
         const song = album.songs[songId];
