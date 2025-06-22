@@ -158,6 +158,51 @@ const newworld = {
         },
     }
 }
+// やさしさ
+const kindness = {
+    songs: {
+        song1: {
+            songId: "kindness",
+            songName: "やさしさ",
+            titleLang: "songs__song__jp"
+        },
+    }
+}
+// 創世 -NEO-
+const neo = {
+    songs: {
+        song1: {
+            songId: "newworld",
+            songName: "新世界",
+            titleLang: "songs__song__jp"
+        },
+        song2: {
+            songId: "wolf",
+            songName: "Wolf",
+            titleLang: "songs__song__en"
+        },
+        song3: {
+            songId: "hero",
+            songName: "HERO",
+            titleLang: "songs__song__en"
+        },
+        song4: {
+            songId: "anata",
+            songName: "anata",
+            titleLang: "songs__song__en"
+        },
+        song5: {
+            songId: "transformation",
+            songName: "変身",
+            titleLang: "songs__song__jp"
+        },
+        song6: {
+            songId: "kindness",
+            songName: "やさしさ",
+            titleLang: "songs__song__jp"
+        },
+    }
+}
 function aniPause (aniClass) {
     aniClass.currentTime = 0;
     aniClass.pause();
@@ -227,6 +272,10 @@ window.onload = function () {
         album = JSON.parse(JSON.stringify(anata));
     } else if (param === 'newworld') {
         album = JSON.parse(JSON.stringify(newworld));
+    } else if (param === 'kindness') {
+        album = JSON.parse(JSON.stringify(kindness));
+    } else if (param === 'neo') {
+        album = JSON.parse(JSON.stringify(neo));
     }
     for (const songId in album.songs) {
         const song = album.songs[songId];
@@ -488,6 +537,17 @@ window.onload = function () {
                 "室山颯",
                 "室山颯",
                 "この頭脳で この知能で<br>腐り果てた 世を正す<br>邪魔する者は 逆らう者は<br>正義の名の下に裁く<br><br>この思想が この理想が<br>悪を暴き 世を変える<br>恐怖ではなく 支配でもない<br>目指すのは新世界の神だ<br>新世界の神だ<br><br>死神が僕を導いていく この力があれば<br>手を染めてしまったら 後には引けない<br>もう戻れない<br><br>おかしくなっていく 正義感も<br>暴走していく<br>狂い狂っていく 価値観も<br>壊れてしまう<br><br>歪んだ お月様<br>己こそが正義か<br>淀んだ 明かりが<br>世界を照らした<br><br>おかしくなっていく 正義感も<br>暴走していく<br>狂い狂っていく 価値観も<br>壊れてしまう<br>イカれてしまっている 神様も<br>見放している<br>名が刻まれる 鼓動はもう<br>すぐに止まる<br><br>砕けた お月様<br>最後の最後は足掻き<br>汚れた 明かりは<br>世界から消えた"
+            )
+        };
+    }
+    // やさしさ
+    if(document.getElementById('kindness')) {
+        document.getElementById("kindness").onclick = function() {
+            displayLyric(
+                "やさしさ",
+                "室山颯",
+                "室山颯",
+                "優しさにいつも助けられているけど<br>もらった分をちゃんと返せるか不安で<br>当たり前なこと 甘えてしまっていること<br>分かってる<br>だからこそ僕も優しくありたいな<br><br>優しさって全部 正しさって全部<br>受け入れることかな 手にすべきものかな<br>そんな単純明快で 簡単な正解で<br>片付けられるもの 答えが出せることじゃないよ<br><br>思いの裏側に 隠されているもの<br>抱えていること 閉じ込めているもの<br>目に映っているもの それだけが全てじゃないよ<br><br>優しさってきっと強さも必要で<br>正しさもきっと時には間違いで<br>その中でやっと気づくこともあるだろう<br>少しでも本当の優しさに近づけたらいいな<br><br>心無い言葉は人を傷つけ<br>悩みや不安も押し寄せるけど<br>そんな時だとしても<br>手を差し伸べること<br>目に入ってくるもの<br>その全てに誠実にいたいよ<br><br>優しさにきっと見返りとかなくて<br>誰かの心に 思い遣り 寄り添って<br>その中でやっと分かることもあるだろう<br>それでも複雑で難しい<br>理解できないこともある<br><br>今もしあなたが<br>そこで笑ってくれたら<br>あなたの大切な人はきっと救われて<br><br>救われた人が また誰かを救うから<br>そうやって優しさがこの先もずっと続くように<br>そう思える人でこれからもずっと<br>ずっといれますように"
             )
         };
     }
