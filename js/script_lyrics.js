@@ -213,6 +213,16 @@ const life = {
         },
     },
 };
+// 黒鳥
+const black_bird = {
+    songs: {
+        song1: {
+            songId: "black_bird",
+            songName: "黒鳥",
+            titleLang: "songs__song__jp",
+        },
+    },
+};
 function aniPause(aniClass) {
     aniClass.currentTime = 0;
     aniClass.pause();
@@ -284,6 +294,8 @@ window.onload = function () {
         album = JSON.parse(JSON.stringify(neo));
     } else if (param === "life") {
         album = JSON.parse(JSON.stringify(life));
+    } else if (param === "black_bird") {
+        album = JSON.parse(JSON.stringify(black_bird));
     }
     for (const songId in album.songs) {
         const song = album.songs[songId];
@@ -559,7 +571,7 @@ window.onload = function () {
             );
         };
     }
-    //
+    // 人生
     if (document.getElementById("life")) {
         document.getElementById("life").onclick = function () {
             displayLyric(
@@ -567,6 +579,17 @@ window.onload = function () {
                 "室山颯",
                 "室山颯",
                 "ありきたりな日々  うだつの上がらない日々<br>終わらないの？ 意味を見出せずにいる<br>飲み込まれていく人の波 何も掴めない暗闇<br>それでも、意味ないとしても<br>進むんだ 続くんだ  その果てはある<br><br>人生に終わりあることが <br>永遠はこの世にないことが<br>生きている感覚を 今 を煌めかせてる<br>100年後ここにいなくても<br>経験に無駄なんてないこと<br>この瞬間を その一瞬を 麗しく生きていこう<br><br>時に悩み立ち止まり いつもないものをねだり<br>当たり前 の価値を見落としている<br>目指したもの見失い 流した涙と後悔<br>例え遠回りだとしても<br>刻むんだ 忘れんな それが糧になる<br><br>人生に2度目があるなら<br>やり直しがきいてしまうなら<br>生きている実感も 今 も色褪せてしまう<br>明日がやってこないことが<br>誰にも起こり得ることだから<br>この瞬間を その一瞬を 麗しく生きていこう<br><br>誰かに笑われたその夢が<br>どうせ諦めきれないなら<br>挑み続けろ 君の 君だけの人生<br> やりたい事あるなら<br>なりたい姿が今あるなら<br>この瞬間を その一瞬を<br>この瞬間を その一瞬を<br>この人生を その命を 全てを賭けてみせろ",
+            );
+        };
+    }
+    // 黒鳥
+    if (document.getElementById("black_bird")) {
+        document.getElementById("black_bird").onclick = function () {
+            displayLyric(
+                "黒鳥",
+                "室山颯",
+                "室山颯",
+                "君は見たことないものを<br>信じ続けられるかい？<br>誰もが否定することを<br>信じ切れるか<br><br>『色違い それ自体 想定外』<br>狭い視界 この時代 取り残されていくよ<br><br>『あり得ない なんてこと 在り得ないよ』<br>常識などない<br>『つまらない 予定調和 いらないよ』<br>正直もうダルい<br>『当たり前 その考え 危ないよ』<br>様式疑い<br>『変わらない くだらない 思考回路』<br>今すぐにもう捨てろ<br><br>不測事態 絶対はない 前提の崩壊<br>踊り歌い 舞台に舞うは白い羽<br>そんな意識は 全部捨てて 書き換えろ<br><br>『あり得ない なんてこと 在り得ないよ』<br>常識などない<br>『つまらない 予定調和 いらないよ』<br>正直もうダルい<br>『当たり前 その考え 危ないよ』<br>様式疑い<br>『変わらない くだらない 思考回路』<br>今すぐにもう捨てろ<br><br>『色違い 白以外 認めてない』<br>広い世界 黒い個体 鳥も小洒落ているよ",
             );
         };
     }
