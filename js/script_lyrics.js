@@ -710,8 +710,8 @@ window.onload = function () {
         };
     }
     // 衝動
-    if (document.getElementById("impluse")) {
-        document.getElementById("impluse").onclick = function () {
+    if (document.getElementById("impulse")) {
+        document.getElementById("impulse").onclick = function () {
             displayLyric(
                 "衝動",
                 "",
